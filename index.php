@@ -22,7 +22,7 @@ function getLocalIP()
 $nid=$_GET['id'];
 $weight=$_GET['w'];
 $link=new mysqli(getLocalIP(), 'user', '548794877414', 'weight');
-if ($mysqli -> connect_errno)
+if ($link -> connect_errno)
 {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
