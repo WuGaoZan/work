@@ -24,7 +24,7 @@ $weight=$_GET['w'];
 $link=new mysqli(getLocalIP(), 'user', '548794877414', 'weight');
 if ($link -> connect_errno)
 {
-  echo "Failed to connect to MySQL: " . $link -> connect_error;
+  echo "Failed to connect to MySQL: ". $link -> connect_errno . $link -> connect_error;
   exit();
 }
 $sql="INSERT INTO `test`(`nid`, `weight`) VALUES ($nid,$weight)";
