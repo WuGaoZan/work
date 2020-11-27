@@ -1,5 +1,9 @@
 <?php
-$link=new mysqli('localhost', 'root', '', 'weight');
+$nid=$_GET['id'];
+$weight=$_GET['w'];
+$link=new mysqli('192.168.0.100', 'user', '548794877414', 'weight');
+$sql="INSERT INTO `test`(`nid`, `weight`) VALUES ($nid,$weight)";
+$addata=$link->query($sql);
 $select="SELECT * FROM test WHERE 1";
 $search=$link->query($select);
 echo '<table border=0 width=250>';
