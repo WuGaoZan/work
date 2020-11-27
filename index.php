@@ -1,34 +1,14 @@
 <?php
-function getLocalIP()
-	{
-		$preg = "/\A((([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\.){3}(([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\Z/";
-		//獲取作業系統為win2000/xp、win7的本機IP真實地址
-		exec("ipconfig", $out, $stats);
-		if (!empty($out))
-		{
-			foreach ($out AS $row)
-			{
-				if (strstr($row, "IP") && strstr($row, ":") && !strstr($row, "IPv6"))
-				{
-					$tmpIp = explode(":", $row);
-					if (preg_match($preg, trim($tmpIp[1])))
-					{
-						return trim($tmpIp[1]);
-					}
-				}
-			}
-		}
-	}
-$nid=$_GET['id'];
-$weight=$_GET['w'];
+//$nid=$_GET['id'];
+//$weight=$_GET['w'];
 $link=new mysqli('192.168.0.100', 'user', '548794877414', 'weight');
 if ($link -> connect_errno)
 {
   echo "Failed to connect to MySQL: ". $link -> connect_errno . $link -> connect_error;
   exit();
 }
-$sql="INSERT INTO `test`(`nid`, `weight`) VALUES ($nid,$weight)";
-$addata=$link->query($sql);
+//$sql="INSERT INTO `test`(`nid`, `weight`) VALUES ($nid,$weight)";
+//$addata=$link->query($sql);
 $select="SELECT * FROM test WHERE 1";
 $search=$link->query($select);
 echo '<table border=0 width=250>';
