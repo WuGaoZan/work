@@ -22,6 +22,11 @@ function getLocalIP()
 $nid=$_GET['id'];
 $weight=$_GET['w'];
 $link=new mysqli(getLocalIP(), 'user', '548794877414', 'weight');
+if ($mysqli -> connect_errno)
+{
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
 $sql="INSERT INTO `test`(`nid`, `weight`) VALUES ($nid,$weight)";
 $addata=$link->query($sql);
 $select="SELECT * FROM test WHERE 1";
