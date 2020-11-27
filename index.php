@@ -19,6 +19,7 @@
 			}
 		}
 	}
+	echo getLocalIP();
 	$link=new mysqli(getLocalIP(), 'user', '548794877414', 'weight');
 	$select="SELECT * FROM test WHERE 1";
 	$search=$link->query($select);
