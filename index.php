@@ -1,13 +1,13 @@
 <?php
-$nid=$_GET['id'];
-$weight=$_GET['w'];
+//$nid=$_GET['id'];
+//$weight=$_GET['w'];
 $link=new mysqli('192.168.0.100', 'user', 'tachitsuteto123', 'weight');
 if ($link -> connect_errno) {
   echo "Failed to connect to MySQL: " . $link -> connect_error;
   exit();
 }
-$sql="INSERT INTO `weight`(`nid`, `weight`) VALUES ($nid,$weight)";
-$addata=$link->query($sql);
+//$sql="INSERT INTO `weight`(`nid`, `weight`) VALUES ($nid,$weight)";
+//$addata=$link->query($sql);
 $select="SELECT * FROM weight WHERE 1";
 $search=$link->query($select);
 echo '<table border=0 width=250>';
