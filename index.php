@@ -1,9 +1,9 @@
 
 <?php
-$ip='127.0.0.1';
-$user='user';
-$pw='';
-$db='weight';
+$ip='163.23.180.231';
+$user='prj_10905';
+$pw='FDqWDXA12XIY7Zit';
+$db='prj_10905';
 $link=new mysqli($ip, $user, $pw, $db);
 if ($link -> connect_errno) {
   echo "Failed to connect to MySQL: " . $link -> connect_error;
