@@ -1,6 +1,6 @@
 
 <?php
-$ip=127.0.0.1;
+$ip='127.0.0.1';
 $user='user';
 $pw='';
 $db='weight';
