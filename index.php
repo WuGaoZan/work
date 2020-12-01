@@ -1,5 +1,5 @@
 <?php
-$ip='163.23.180.231';
+$ip='localhost';
 $user='prj_10905';
 $pw='FDqWDXA12XIY7Zit';
 $db='prj_10905';
