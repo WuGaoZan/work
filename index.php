@@ -8,7 +8,7 @@ if ($link -> connect_errno) {
   echo "Failed to connect to MySQL: " . $link -> connect_error;
   exit();
 }
-$sel="SELECT * FROM weight WHERE 1";
+$sel="SELECT * FROM data WHERE 1";
 $sh=$link->query($sel);
 echo '<table border=0 width=250>';
 echo '<tr>';
@@ -25,7 +25,7 @@ while($data=$sh->fetch_assoc())
 	echo '</tr>';
 }
 echo '</table>';
-$sel="SELECT SUM(weight) AS SUM FROM weight WHERE 1";
+$sel="SELECT SUM(weight) AS SUM FROM data WHERE 1";
 $sh=$link->query($sel);
 $data=$sh->fetch_assoc();
 echo '</br></br>SUM(weight)='.$data['SUM'];
