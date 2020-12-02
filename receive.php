@@ -1,16 +1,15 @@
 <?php
-$ip=127.0.0.1;
-$user='user';
-$pw='';
-$db='weight';
+$ip='localhost';
+$user='prj_10905';
+$pw='FDqWDXA12XIY7Zit';
+$db='prj_10905';
 $nid=$_GET['id'];
 $weight=$_GET['w'];
 $link=new mysqli($ip, $user, $pw, $db);
 if ($link -> connect_errno) {
-  echo "連線失敗: " . $link -> connect_error;
-  exit();
+  echo "connect fail: " . $link -> connect_error;
 }
-$sql="INSERT INTO `weight`(`nid`, `weight`) VALUES ($nid,$weight)";
+$sql="INSERT INTO `data`(`nid`, `weight`) VALUES ($nid,$weight)";
 $add=$link->query($sql);
 $link->close();
 ?>
