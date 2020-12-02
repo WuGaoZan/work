@@ -1,38 +1,47 @@
 <?php
 $ip='localhost';
-$user='prj_10905';
-$pw='FDqWDXA12XIY7Zit';
-$db='prj_10905';
+$user='*********';
+$pw='****************';
+$db='*********';
 $link=new mysqli($ip, $user, $pw, $db);
 if ($link -> connect_errno) {
   echo "Failed to connect to MySQL: " . $link -> connect_error;
   exit();
 }
-if()
-{
-$sel="SELECT SUM(weight) AS SUM FROM data WHERE 1";
-$sh=$link->query($sel);
-$data=$sh->fetch_assoc();
-echo '</br></br>SUM(weight)='.$data['SUM'];
-$sel="INSERT INTO weight (weight) VALUE ($data['SUM'])";
-$stg
-}
 $sel="SELECT * FROM data WHERE 1";
-$sh=$link->query($sel);
+$sch=$link->query($sel);
+if($data=$sch->fetch_assoc())
+{
+	$sel="SELECT SUM(wid) AS SUM FROM data WHERE 1";
+	$sch=$link->query($sel);
+	$data=$sch->fetch_assoc();
+	if($data['SUM']==10)
+	{
+		$sel="SELECT SUM(weight) AS SUM FROM data WHERE 1";
+		$sch=$link->query($sel);
+		$data_s=$sch->fetch_assoc();
+		$sum=$data_s['SUM'];
+		$selt="INSERT INTO `weight`(`weight`) VALUES ($sum)";
+		$ad=$link->query($selt);
+		$clr="TRUNCATE TABLE data";
+		$st=$link->query($clr);
+	}
+}
+$sel="SELECT * FROM weight WHERE 1";
+$sch=$link->query($sel);
 echo '<table border=0 width=250>';
 echo '<tr>';
 echo '<td>wid</td>';
-echo '<td>nid</td>';
 echo '<td>weight</td>';
 echo '</tr>';
-while($data=$sh->fetch_assoc())
+while($data=$sch->fetch_assoc())
 {
 	echo '<tr>';
 	echo '<td>'.$data['wid'].'</td>';
-	echo '<td>'.$data['nid'].'</td>';
 	echo '<td>'.$data['weight'].'</td>';
 	echo '</tr>';
 }
 echo '</table>';
+
 $link->close();
 ?>
