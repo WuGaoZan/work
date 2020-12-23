@@ -20,6 +20,8 @@
 			echo	"搜尋失敗
 					<html>
 						<head>
+							<link rel='stylesheet' href='http://163.23.180.231/~711317/style.css'>
+							<link rel='icon' href='http://163.23.180.231/~711317/google_icon.png' type='image/x-icon' />
 							<meta charset='utf-8'>
 							<title>專題</title>
 						</head>
@@ -34,6 +36,8 @@
 		{
 			echo   "<html>
 						<head>
+							<link rel='stylesheet' href='http://163.23.180.231/~711317/style.css'>
+							<link rel='icon' href='http://163.23.180.231/~711317/google_icon.png' type='image/x-icon' />
 							<meta charset='utf-8'>
 							<title>專題</title>
 						</head>
@@ -48,7 +52,7 @@
 							</form>
 							<form method='post' action='update.php'>
 								名字:
-								<input type='text' onKeypress='if (event.keyCode <= 65 || event.keyCode >= 117) event.returnValue = false;' name='name'/>
+								<input autocomplete='off' type='text' onKeypress='if (event.keyCode <= 65 || event.keyCode >= 117) event.returnValue = false;' name='name'/>
 								<input type='hidden' name='id' value=$id>
 								<input type='hidden' name='old_name' value=$name>
 								<input type='submit' value='更新'/>
