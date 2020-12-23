@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="http://163.23.180.231/~711317/style.css">
+		<link rel="icon" href="http://163.23.180.231/~711317/google_icon.png" type="image/x-icon" />
 		<meta charset="utf-8">
 		<title>專題</title>
 	</head>
 	<body>
-		<form action='weight.php'>
-			<input type='submit' value='重量'/>
+		<form action="weight.php">
+			<input type="submit" value="重量"/>
 		</form>
-		<form action='data.php'>
-			<input type='submit' value='資料'/>
+		<form action="data.php">
+			<input type="submit" value="資料"/>
 		</form>
-		<form method='post' action='search.php'>
+		<form method="post" action="search.php">
 			id:
-			<input type="text" onKeypress="if (event.keyCode <= 48 || event.keyCode >= 57) event.returnValue = false;" name='wid'/>
-			<input type='submit' value='搜尋'/>
+			<input required autocomplete="off" type="text" onKeypress="if (event.keyCode <= 48 || event.keyCode >= 57) event.returnValue = false;" name="wid"/>
+			<input type="submit" value="搜尋"/>
 		</form>
-		<form action='clear.php'>
-			<input type='submit' value='清除'/>
+		<form action="clear.php">
+			<input type="submit" value="清除"/>
+		</form>
+		<form action="test.php">
+			<input type="submit" value="測試"/>
 		</form>
 	</body>
 </html>
