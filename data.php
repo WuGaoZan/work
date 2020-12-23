@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="http://163.23.180.231/~711317/style.css">
+		<link rel="icon" href="http://163.23.180.231/~711317/google_icon.png" type="image/x-icon" />
 		<meta charset='utf-8'>
 		<title>專題</title>
 	</head>
