@@ -1,11 +1,14 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="http://163.23.180.231/~711317/style.css">
+		<meta http-equiv="refresh" content="3" />
 		<meta charset='utf-8'>
 		<title>專題</title>
+		<link rel="icon" href="http://163.23.180.231/~711317/google_icon.png" type="image/x-icon" />
 	</head>
 	<body>
-		<form action='index.html'>
-			<input type='submit' value='返回'/>
+		<form action="index.html">
+			<input type="submit" value="返回"/>
 		</form>
 	</body>
 </html>
