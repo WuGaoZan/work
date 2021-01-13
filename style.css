@@ -1,0 +1,42 @@
+input[type=submit]
+{
+	width: 300px;
+	height:100px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	font-size: 70px;
+}
+input[type=text]
+{
+	width: 300px;
+	height:100px;
+	font-size: 50px;
+}
+input[type=password]
+{
+	width: 300px;
+	height:100px;
+	font-size: 50px;
+}
+body
+{
+	color: white;
+	font-size: 50px;
+	position:relative;
+	top:200px;
+}
+table
+{
+	font-size: 50px;
+	border: 0;
+	width: 500;
+	color: white;
+}
+html
+{
+	background-color:black;
+	//background-size: cover;
+	//background:#fff url('http://163.23.180.231/~711317/image.png') center center fixed no-repeat;
+	//background-image: url('http://163.23.180.231/~711317/image.png');
+}
